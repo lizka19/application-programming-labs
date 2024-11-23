@@ -20,8 +20,8 @@ def read_file(file_name: str) -> str:
         with open(file_name, mode='r', encoding='UTF-8') as file:
             date = file.read()
         return date
-    except:
-        raise FileNotFoundError("File was not found")
+    except Exception:
+        print("File was not found")
 
 class NoPatternFoundError(Exception):
     """
@@ -44,8 +44,6 @@ def find_people_with_city_code(divider: list[str]) -> list[str]:
     возвращаем список требуемых анкет
     """
     found = [i for i in divider if re.search(r'\+7 927', i)]
-    if len(found) == 1:
-        raise NoPatternFoundError("pattern is not found in the text")
     return found
 
 def out_form(found: list[str]) -> None:
