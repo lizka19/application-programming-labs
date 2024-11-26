@@ -1,4 +1,3 @@
-
 import argparse
 import re
 
@@ -20,8 +19,8 @@ def read_file(file_name: str) -> str:
         with open(file_name, mode='r', encoding='UTF-8') as file:
             date = file.read()
         return date
-    except Exception:
-        print("File was not found")
+    except Exception as e:
+        raise IOError("No file was fond")
 
 class NoPatternFoundError(Exception):
     """
@@ -55,7 +54,6 @@ def out_form(found: list[str]) -> None:
     for j in found:
         print(j)
 
-
 def main() -> None:
     try:
         filename = get_file_name()
@@ -65,7 +63,6 @@ def main() -> None:
         out_form(found)
     except Exception as exc:
         print(f"Error: {exc}")
-
 
 if __name__ == "__main__":
     main()
