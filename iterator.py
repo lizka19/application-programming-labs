@@ -1,5 +1,6 @@
 import csv
 
+
 class SimpleIterator:
     def __init__(self, annotation_path: str) -> None:
         self.ap = annotation_path

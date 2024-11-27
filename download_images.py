@@ -1,8 +1,5 @@
 import os
-
 from icrawler.builtin import GoogleImageCrawler
-
-
 
 def download_images(keyword: str, save_path: str) -> None:
     """

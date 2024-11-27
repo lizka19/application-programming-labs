@@ -1,6 +1,7 @@
 import csv
 import os
 
+
 def create_annotation(save_path: str, annotation_path: str) -> None:
     """
     Создает файл аннотаций с абсолютными и относительными путями к изображениям.
