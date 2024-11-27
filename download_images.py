@@ -3,7 +3,7 @@ from icrawler.builtin import GoogleImageCrawler
 
 def download_images(keyword: str, save_path: str) -> None:
     """
-    загружает изображение по ключевым словам
+    загружает изображения по ключевым словам
     """
     try:
         google_crawler = GoogleImageCrawler(storage={'root_dir': save_path})
