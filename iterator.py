@@ -3,7 +3,7 @@ import csv
 class SimpleIterator:
     def __init__(self, annotation_path: str) -> None:
         self.ap = annotation_path
-        self.list = self.download_img()
+        self.list = self.__download_img()
         self.limit = len(self.list)
         self.counter = 0
 
@@ -18,7 +18,7 @@ class SimpleIterator:
         else:
             raise StopIteration
 
-    def download_img(self) -> list:
+    def __download_img(self) -> list:
         with open(self.ap, mode='r', encoding="utf-8") as file:
             reader = csv.reader(file)
             next(reader)

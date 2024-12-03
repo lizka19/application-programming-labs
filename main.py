@@ -7,7 +7,7 @@ def main():
 
     keyword, save_path, annotation_path = parse_args()
     try:
-        download_images(keyword, save_path)
+        # download_images(keyword, save_path)
         create_annotation(save_path, annotation_path)
         iterator = SimpleIterator(annotation_path=annotation_path)
         for image in iterator:
