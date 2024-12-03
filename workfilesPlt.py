@@ -5,6 +5,7 @@ import numpy as np
 def show_graph(hist_list: list)->None:
     """
     Создаёт граф по гистограмме, полученной в другой функции
+    :param hist_list: список гистограмм изображений для каждого цвета
     """
     plt.plot(hist_list[0], color='blue', label='channel blue')
     plt.plot(hist_list[1],color='red', label='channel red')
@@ -21,6 +22,8 @@ def show_graph(hist_list: list)->None:
 def show_images(img:np.ndarray, f_img:np.ndarray)->None:
     """
     Показывает два изображения: оригинальное и инвертнутое
+    :param img: оригинальное изображение
+    :param f_img: инвертируемое изображение
     """
     plt.figure(figsize=(10,5))
 

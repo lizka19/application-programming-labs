@@ -5,6 +5,8 @@ import numpy as np
 def get_histogram(img:np.ndarray)->list:
     """
     Получает гистограмму по цветам
+    :param img: изображение, гистограмму которого вам нужно найти
+    :return: список гистограмм изображений для каждого цвета
     """
     hist_list = []
     for i in range(0,3):
@@ -16,6 +18,8 @@ def get_histogram(img:np.ndarray)->list:
 def get_inverted_img(img:np.ndarray)->np.ndarray:
     """
     Инвертирует цвета картинки
+    :param img: изображение, цвета которого нужно
+    :return: инвертированоое изображение
     """
     return cv2.bitwise_not(img)
 
@@ -23,6 +27,8 @@ def get_inverted_img(img:np.ndarray)->np.ndarray:
 def save_inverted_img(img:np.ndarray, f_img:str)->None:
     """
     Сохраняет итоговое изображение в необходимую директорию
+    :param img: изображение
+    :param f_img: каталог-сохранения
     """
     cv2.imwrite(f_img,img)
 
