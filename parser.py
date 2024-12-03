@@ -3,6 +3,7 @@ import argparse
 def parse_args():
     """
     получаем аргументы из командной строки
+    :return: аргументы командной строки
     """
     parser = argparse.ArgumentParser()
     parser.add_argument('keyword', type=str, help="Word for search")
